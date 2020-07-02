@@ -1,0 +1,73 @@
+import java.util.Scanner;
+public class Nickname
+{
+    public static void main(String [] args)
+    {
+        Scanner in = new Scanner (System.in);
+        System.out.println ("Pleace enter your name");
+        String name = in.nextLine();
+        int numName = name.length()-1;
+        int numName2;
+        numName2= numName -1;
+        int numName3 = numName2 -1;
+        char n = name.charAt(numName);
+        char n2 = name.charAt(numName2);
+        char n3 = name.charAt(numName3);
+
+        String nick1 = "oosh";
+        String nick2 = "'le";
+        String nick3 = "ali";
+        String nick4 = "ooli";
+        String nick5 = "i";
+
+
+        char[] nikot={'a','o','i','u','e'};
+        boolean isNikod=false;
+        boolean isNikod3=false;
+
+        for(int i=0;i<nikot.length;i++){
+            if (n==nikot[i]) {
+                isNikod=true;
+            }
+            if (n3==nikot[i]) {
+                isNikod3=true;
+            }
+        }
+
+        if (isNikod)
+        {
+            if (n2 == 'y')
+
+                if (isNikod3)
+                {
+                    System.out.println(name + nick2);
+                    name = name.substring(0,numName3);
+                    System.out.println(name + nick1);
+                    System.out.println(name + nick3);
+                    System.out.println(name + nick5);
+                    return;
+                }
+        }
+        else if (!isNikod)
+        {
+            System.out.println(name + nick1);
+            System.out.println(name + nick2);
+            System.out.println(name + nick3);
+            System.out.println(name + nick5);
+        }
+        if (isNikod)
+        {
+            if (n2 !='y')
+                System.out.println(name + nick2);
+            name = name.substring(0,numName);
+            System.out.println(name + nick1);
+            System.out.println(name + nick4);
+            System.out.println(name + nick3);
+            System.out.println(name + nick5);
+        }
+
+
+    }
+
+
+}
